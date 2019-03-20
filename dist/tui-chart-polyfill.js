@@ -2,10 +2,10 @@
  * tui-chart-polyfill
  * @fileoverview tui-chart
  * @author NHN Ent. FE Development Lab <dl_javascript@nhnent.com>
- * @version 3.6.1
+ * @version 3.6.2
  * @license MIT
- * @link https://github.com/nhnent/tui.chart
- * bundle created at "Tue Mar 05 2019 16:09:08 GMT+0900 (Korean Standard Time)"
+ * @link https://github.com/ninelhodzic/tui.chart
+ * bundle created at "Wed Mar 20 2019 01:35:20 GMT+0100 (Central European Standard Time)"
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -25864,7 +25864,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	    ComponentManager.prototype.presetBeforeRerender = function presetBeforeRerender() {
-	        this.componentMap.mouseEventDetector.presetBeforeRerender();
+	        if (this.componentMap.mouseEventDetector.presetBeforeRerender) {
+	            this.componentMap.mouseEventDetector.presetBeforeRerender();
+	        }
 	    };
 	
 	    /**
