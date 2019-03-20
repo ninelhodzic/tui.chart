@@ -221,7 +221,8 @@ class ComponentManager {
      * Preset before rerender
      */
     presetBeforeRerender() {
-        this.componentMap.mouseEventDetector.presetBeforeRerender();
+        if (this.componentMap.mouseEventDetector.presetBeforeRerender)
+            this.componentMap.mouseEventDetector.presetBeforeRerender();
     }
 
     /**
